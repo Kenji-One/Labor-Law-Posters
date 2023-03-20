@@ -14,15 +14,15 @@
       margin-top: 0;
     }
   }
-
-  .products {
-    grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
-    &__product {
-      border: 1px solid $color-grey-4;
-      border-top: none;
-      border-radius: 8px;
-      box-shadow: 0 -3px 0 0 $color-blue;
-      padding-bottom: 16px;
-    }
+}
+.products {
+  grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
+  &__product {
+    border: 1px solid $color-grey-4;
+    border-top: none;
+    border-radius: 8px;
+    box-shadow: 0 -3px 0 0 $color-blue;
+    padding-bottom: 16px;
+    color: inherit;
   }
 }

@@ -1,11 +1,17 @@
+.button,
 .btn {
+  .add_to_cart_button,
   &,
   &:link,
   &:visited {
+    border-radius: 4px;
+    width: auto;
     font-family: inherit;
     background-color: $color-tertiary-dark;
     text-decoration: none;
-    padding: 2rem 3.2rem;
+    // padding: 1.6rem 2.4rem;
+    padding: 10px 16px;
+
     display: inline-block;
     transition: all 0.2s;
     position: relative;
@@ -39,36 +45,72 @@
     }
   }
 
+  .add_to_cart_button,
   &__yellow {
     &,
     &:link,
     &:visited {
-      background-color: #fbbc05;
+      background-color: #fbbc05 !important;
       border-radius: 5px;
       padding: 8px 12px;
     }
+  }
+
+  .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+    #respond
+    input#submit.alt,
+  .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+    a.button.alt,
+  .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+    button.button.alt,
+  .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+    input.button.alt,
+  :where(body:not(.woocommerce-block-theme-has-button-styles))
+    .woocommerce
+    #respond
+    input#submit.alt,
+  :where(body:not(.woocommerce-block-theme-has-button-styles))
+    .woocommerce
+    a.button.alt,
+  :where(body:not(.woocommerce-block-theme-has-button-styles))
+    .woocommerce
+    button.button.alt,
+  :where(body:not(.woocommerce-block-theme-has-button-styles))
+    .woocommerce
+    input.button.alt {
+    background-color: #fbbc05 !important;
+    border-radius: 5px;
+    padding: 8px 12px;
   }
 
   &__cart {
     cursor: pointer;
     background: none;
     border: none;
+    text-decoration: none;
     position: relative;
-    &::before {
-      content: "0";
+    & span {
       position: absolute;
       top: -6px;
-      left: 4px;
-      padding: 0.5px 4px;
+      left: 3px;
+      /* padding: 0px 3px; */
+      width: 18px;
+      height: 21px;
       border-radius: 50%;
-      font-size: 11px;
-      background-color: $color-red;
-      color: $color-white;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #c5161c;
+      color: #fff;
     }
     & i {
       color: $color-blue;
-      font-size: 24px;
+      font-size: 32px;
     }
+  }
+  &__blue {
+    align-self: center;
   }
 
   &:hover {
@@ -83,4 +125,104 @@
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
+}
+.add_to_cart_button {
+  &,
+  &:link,
+  &:visited {
+    margin-top: 12px;
+    border-radius: 4px;
+    width: auto;
+    font-family: inherit;
+    background-color: $color-tertiary-dark;
+    text-decoration: none;
+    padding: 1.6rem 2.4rem;
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    font-size: $default-font-size;
+    line-height: 2rem;
+    color: $color-white;
+    @include respond(phone) {
+      padding: 12px 14px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  & {
+    //Change for the <button> element
+    border: none;
+    // background: none;
+    cursor: pointer;
+  }
+  &,
+  &:link,
+  &:visited {
+    background-color: $color-tertiary-dark !important;
+    border-radius: 5px;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s;
+    color: $color-white !important;
+  }
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+  #respond
+  input#submit.alt,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+  a.button.alt,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+  button.button.alt,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+  input.button.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles))
+  .woocommerce
+  #respond
+  input#submit.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles))
+  .woocommerce
+  a.button.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles))
+  .woocommerce
+  button.button.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles))
+  .woocommerce
+  input.button.alt {
+  background-color: $color-tertiary-dark !important;
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+  #respond
+  input#submit,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+  a.button,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+  button.button,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+  input.button,
+:where(body:not(.woocommerce-block-theme-has-button-styles))
+  .woocommerce
+  #respond
+  input#submit,
+:where(body:not(.woocommerce-block-theme-has-button-styles))
+  .woocommerce
+  a.button,
+:where(body:not(.woocommerce-block-theme-has-button-styles))
+  .woocommerce
+  button.button,
+:where(body:not(.woocommerce-block-theme-has-button-styles))
+  .woocommerce
+  input.button {
+  font-weight: 500 !important;
+  border-radius: 4px !important;
+  color: #fff !important;
+  background-color: $color-tertiary-dark !important;
 }

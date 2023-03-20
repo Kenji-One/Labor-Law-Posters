@@ -25,6 +25,16 @@
   height: auto;
 }
 
+.a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.u-uppercase-text {
+  text-transform: uppercase;
+}
+
 .u-flex {
   display: flex;
 }
@@ -33,11 +43,30 @@
   justify-content: center;
 }
 
+.u-auto-left {
+  margin-left: auto;
+}
+
+.u-align-center {
+  align-items: center;
+}
+
 .u-space-between {
   justify-content: space-between;
 }
 .white {
   color: $color-white;
+}
+.u-red-text {
+  color: $color-red;
+}
+
+.u-orange-text {
+  color: $color-orange;
+}
+
+.u-full-width {
+  width: 100%;
 }
 
 .mobile-hidden {
@@ -53,6 +82,7 @@
   }
 }
 
+.custom-logo,
 .tablet-hidden {
   @include respond(tablet) {
     display: none !important;
@@ -72,12 +102,18 @@
 .u-blue-text {
   color: $color-blue;
 }
+.u-primary-text {
+  color: $color-primary;
+}
 .u-italic-text {
   font-style: italic;
 }
 
 .u-strong-text {
   font-weight: 700;
+}
+.u-bold-text {
+  font-weight: bold;
 }
 
 .u-grey-text {
@@ -110,7 +146,7 @@
 }
 
 .u-margin-bottom-smallest-4 {
-  margin-bottom: 1.2rem !important;
+  margin-bottom: 12px !important;
   @include respond(phone-small) {
     margin-bottom: 8px !important;
   }
@@ -158,11 +194,14 @@
   @include respond(tablet) {
     margin-top: 32px !important;
   }
-  @include respond(tab-phone) {
-    margin-top: 24px !important;
+}
+.u-margin-top-largest {
+  margin-top: 12rem !important;
+  @include respond(tab-land) {
+    margin-top: 5.2rem !important;
   }
-  @include respond(phone-small) {
-    margin-top: 6px !important;
+  @include respond(tablet) {
+    margin-top: 32px !important;
   }
 }
 .u-margin-top-medium {
@@ -170,6 +209,12 @@
 
   @include respond(phone-small) {
     margin-top: 16px !important;
+  }
+}
+.u-margin-top-small {
+  margin-top: 16px !important;
+  @include respond(phone-small) {
+    margin-top: 12px !important;
   }
 }
 

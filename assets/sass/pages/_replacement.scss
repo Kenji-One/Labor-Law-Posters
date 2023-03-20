@@ -1,0 +1,84 @@
+.replacement {
+  &__hero {
+    & > div:nth-of-type(1) {
+      max-width: 80rem;
+      margin: auto;
+      margin-bottom: 3.2rem;
+      img {
+        max-width: 11.5rem;
+      }
+    }
+  }
+  &__card {
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 3.16fr 1.52fr;
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+    }
+    &--left {
+      padding: 4rem;
+      border-radius: 4px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      padding-left: 5.2rem;
+      background-color: $color-tertiary-light;
+    }
+
+    &--right {
+      border-radius: 4px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding: 4rem 3.2rem;
+      background-color: $color-primary;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    span {
+      font-style: italic;
+      font-weight: 700;
+      color: $color-orange;
+    }
+    li::before {
+      content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: $color-orange; /* Change the color */
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1em; /* Also needed for space (tweak if needed) */
+      margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+  }
+
+  &__perfect-fors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33.6rem, 1fr));
+    justify-items: center;
+    gap: 1.8rem;
+
+    h2 {
+      grid-column: 1 / -1;
+      max-width: 46rem;
+    }
+  }
+
+  &__perfect-for {
+    i {
+      font-size: 32px;
+      color: white;
+    }
+    &--icon {
+      margin: auto;
+      padding: 1rem;
+      border-radius: 50%;
+      background-color: $color-blue;
+      width: 67px;
+      height: 67px;
+      @include flexCenter;
+    }
+  }
+}

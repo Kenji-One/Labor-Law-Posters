@@ -107,7 +107,9 @@
     &__product {
       @include alignCenter;
       flex-direction: column;
+      padding: 8px 8px 12px 8px;
       gap: 16px;
+      width: 100%;
       .heading-tertiary {
         color: $color-blue;
       }

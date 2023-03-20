@@ -49,10 +49,8 @@
     }
 
     &--list {
-      align-self: center;
       list-style-type: none;
-      @include alignCenter;
-
+      display: flex;
       gap: 2.4rem;
       &.mobile {
         flex-direction: column;
@@ -87,11 +85,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid $color-grey;
-    border-radius: 40px;
-    padding: 1.2rem 1.8rem;
+    // border: 1px solid $color-grey;
+    // border-radius: 40px;
+    // padding: 1.2rem 1.8rem;
     width: 100%;
-    max-width: 31rem;
+    max-width: 34rem;
 
     & input {
       border: none;
@@ -157,24 +155,34 @@
     height: 100%;
     position: relative;
     @include alignCenter;
+    @include respond(tablet-min) {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+    &,
+    & a {
+      transition: all 0.3s;
+    }
     &.mobile {
       display: unset;
     }
-    &::after {
-      content: "";
-      background-color: $color-tertiary-dark;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0%;
-      height: 3px;
-      z-index: 999;
-      transition: all 0.3s ease;
-    }
+    // &::after {
+    //   content: "";
+    //   background-color: $color-tertiary-dark;
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    //   width: 0%;
+    //   height: 3px;
+    //   z-index: 999;
+    //   transition: all 0.3s ease;
+    // }
     &:hover {
-      &::after {
-        width: 100%;
+      background-color: #fff;
+      & a.header__link {
+        color: #050e21;
       }
     }
   }
@@ -219,7 +227,6 @@
 
   &__submenu {
     list-style-type: none;
-
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -231,9 +238,9 @@
       padding-top: 16px;
       border-top: 5px solid $color-orange;
       position: absolute;
+      left: 0;
       top: 50px;
       background-color: $color-white;
-      border-radius: 6px;
       box-shadow: 0 7px 10px -2px rgba(55, 55, 55, 6%);
       display: flex;
       flex-direction: column;
@@ -265,9 +272,9 @@
       padding-left: 18px;
     }
     &.desktop.x2 {
-      width: 31.6rem;
-      top: -10px;
-      left: 103%;
+      width: 38.6rem;
+      top: -14px;
+      left: 102%;
       border-radius: 0;
       & li:last-child {
         margin: 0;

@@ -67,9 +67,11 @@ const showContent = (content, el) => {
 
 ///////////////////////////////////////////////////////////
 // Set current year
-const yearEl = document.querySelector(".year");
-const currentYear = new Date().getFullYear();
-yearEl.textContent = currentYear;
+if (document.querySelector(".year")) {
+  const yearEl = document.querySelector(".year");
+  const currentYear = new Date().getFullYear();
+  yearEl.textContent = currentYear;
+}
 
 const swiper = new Swiper(".swiper", {
   loop: true,
@@ -113,3 +115,36 @@ toggles.forEach((toggle) => {
     toggle.parentNode.classList.toggle("active");
   });
 });
+
+//  ADVISOR
+
+if (document.getElementById("start-questions")) {
+  const startBtn = document.getElementById("start-questions");
+  const questionarieForm = document.getElementById("questionarie");
+  const contentSection = document.getElementById("content");
+  const selectBtn = document.getElementById("form-select");
+  const allStates = document.querySelectorAll(".select-state-input");
+  const questions = document.querySelectorAll(".advisor__questions");
+  const selectStatesEl = document.getElementById("select-state");
+  let isChecked = 0;
+
+  startBtn.addEventListener("click", () => {
+    contentSection.classList.remove("active");
+    questionarieForm.classList.add("active");
+  });
+
+  selectBtn.addEventListener("click", () => {
+    allStates.forEach((state) => {
+      if (state.checked === true) {
+        selectStatesEl.classList.remove("active");
+        questions.forEach((question) => {
+          question.classList.add("active");
+        });
+        isChecked++;
+      }
+    });
+    if (isChecked === 0) {
+      alert("Pleace check the state you want.");
+    }
+  });
+}

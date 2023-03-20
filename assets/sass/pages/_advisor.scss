@@ -1,0 +1,163 @@
+.advisor {
+  &__content {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.71fr 2.56fr;
+    border-bottom: 4px solid $color-tertiary-dark;
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+    }
+    &--left {
+      text-align: center;
+      padding: 32px;
+      background-color: $color-grey-10;
+      @include alignCenter;
+      flex-direction: column;
+      gap: 16px;
+      i {
+        font-size: 52px;
+      }
+    }
+
+    &--right {
+      background-image: url(../imgs/advisor-guy.png);
+      background-size: cover;
+    }
+  }
+
+  &__onthe {
+    @include alignCenter;
+    flex-direction: column;
+    gap: 8px;
+    background: linear-gradient(
+      to bottom,
+      #06122c 0%,
+      #091833 8%,
+      #0d203b 19%,
+      #122a46 30%,
+      #152f4b 42%,
+      #183652 52%,
+      #204462 65%,
+      #2c5b79 81%,
+      #2d5e7d 100%
+    );
+    border-top: 4px solid $color-orange;
+    border-bottom: 4px solid $color-orange;
+    box-sizing: border-box;
+    padding: 24px 28px;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    margin: 4rem;
+    margin-left: auto;
+  }
+
+  &__about-section {
+    padding: 4rem 16px;
+    background-color: $color-primary;
+    @include flexCenter;
+  }
+
+  &__abouts {
+    max-width: 64rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__about {
+    @include alignCenter;
+    gap: 12px;
+    i {
+      font-size: 32px;
+    }
+  }
+
+  &__quetionarie {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    &--submit {
+      align-self: flex-end;
+    }
+  }
+
+  &__question-title {
+    background-color: $color-tertiary-dark;
+    padding: 12px 8px;
+    font-size: 24px;
+    color: $color-white;
+    line-height: 24px;
+  }
+
+  &__question-content {
+    border: 1px solid $color-primary;
+    padding: 8px;
+    display: none;
+    flex-direction: column;
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__form-heading {
+    @include alignCenter;
+    gap: 24px;
+    padding: 24px;
+    background-color: $color-grey-10;
+    i {
+      font-size: 48px;
+    }
+  }
+
+  &__states {
+    padding-left: 4rem;
+    list-style-type: none;
+    margin: 24px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 12px;
+
+    li {
+      @include alignCenter;
+      gap: 8px;
+    }
+  }
+
+  &__question {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &--info {
+      background-color: $color-grey-8;
+      color: $color-grey--light;
+      padding: 12px 32px;
+      p {
+        max-width: 84rem;
+      }
+    }
+
+    &--radios {
+      @include alignCenter;
+      justify-content: space-between;
+      gap: 14px;
+      max-width: 200px;
+      padding: 16px;
+      padding-left: 32px;
+    }
+  }
+}

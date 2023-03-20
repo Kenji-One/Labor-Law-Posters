@@ -85,6 +85,14 @@
     @include alignCenter;
     justify-content: space-around;
     gap: 16px;
+    &.printable {
+      i {
+        font-size: 32px !important;
+      }
+      p {
+        font-size: 20px !important;
+      }
+    }
   }
   &__icon {
     @include alignCenter;
@@ -123,7 +131,8 @@
     gap: 24px;
   }
 
-  &__types {
+  &__types,
+  .woocommerce-input-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 48px;
@@ -134,9 +143,12 @@
     }
   }
 
-  &__type {
+  &__type,
+  .radio {
+    line-height: inherit !important;
     cursor: pointer;
-    @include alignCenter;
+    display: flex !important;
+    align-items: center;
     justify-content: center;
     border: 1px solid $color-blue;
     border-radius: 5px;
@@ -169,7 +181,7 @@
   }
   .btn__yellow {
     width: 100%;
-    padding: 14px 12px;
+    padding: 14px 12px !important;
     font-size: 16px;
     font-weight: 700;
   }
@@ -193,6 +205,7 @@
   }
 
   &__posterThings {
+    grid-column: 1 / -1;
     &--header {
       padding: 8px 8px 0 8px;
       // height: 52px;
@@ -235,14 +248,19 @@
       }
     }
     &--content {
-      display: none;
+      display: none !important;
       &.active {
-        display: block;
+        display: block !important;
         &#updates {
           display: flex;
           flex-direction: column;
           gap: 12px;
         }
+      }
+      ul {
+        margin-top: 8px;
+        padding-left: 16px;
+        // list-style-type: none;
       }
     }
 
@@ -266,6 +284,9 @@
       padding-bottom: 6px;
       border-bottom: 1px solid $color-grey;
     }
+    &.federal p {
+      border: none;
+    }
     ul {
       margin-top: 8px;
       padding-left: 6px;
@@ -282,6 +303,7 @@
   }
 
   &__simillars {
+    grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
     gap: 16px;
@@ -290,15 +312,19 @@
       padding-bottom: 12px;
       border-bottom: 1px solid $color-grey;
     }
+    & > h2 {
+      grid-column: 1 / -1;
+    }
   }
 
   &__simillar {
-    padding: 12px 10px;
+    padding: 12px 10px !important;
     border: 1px solid $color-grey-7;
     border-radius: 5px;
 
     @include alignCenter;
     flex-direction: column;
+    justify-content: center;
 
     & > a {
       max-width: 90%;
@@ -327,8 +353,8 @@
   & button {
     @include alignCenter;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background-color: $color-white;
     border: 1px solid $color-grey-3;
     text-align: center;
@@ -375,8 +401,8 @@
   &:focus {
     outline: none;
   }
-  width: 40px;
-  height: 40px;
+  width: 35px !important;
+  height: 35px;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;

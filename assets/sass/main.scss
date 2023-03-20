@@ -9,10 +9,11 @@
 
 @import "components/button";
 @import "components/faq";
+@import "components/woocommerce";
 // @import "components/popup";
 // @import "components/profile";
 // @import "components/archive";
-// @import "components/single";
+@import "components/single";
 
 // @import "layout/navigation";
 @import "layout/header";
@@ -24,6 +25,10 @@
 @import "pages/products";
 @import "pages/updates";
 @import "pages/single";
+@import "pages/replacement";
+@import "pages/federal";
+@import "pages/contractor";
+@import "pages/advisor";
 // @import "pages/checkout";
 // @import "pages/privacy";
 // @import "pages/contact";

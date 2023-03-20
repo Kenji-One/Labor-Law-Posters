@@ -1,0 +1,63 @@
+.contractor {
+  &__header {
+    width: 100%;
+    background-color: $color-blue;
+    padding: 12px;
+    @include alignCenter;
+    justify-content: space-around;
+    color: $color-white;
+  }
+
+  &__product {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding-bottom: 1.8rem;
+    border-bottom: 1px solid $color-grey-3;
+
+    &--mobile {
+      display: none;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @include respond(phone) {
+      padding-bottom: 24px;
+      &--mobile {
+        display: grid;
+      }
+
+      &--desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__img-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  &__title {
+    transition: all 0.3s;
+    &:hover {
+      color: $color-blue--light;
+      text-decoration: underline;
+    }
+  }
+
+  div.u-flex.question {
+    max-width: 66rem;
+    gap: 1.4rem;
+    i {
+      font-size: 40px;
+      color: $color-blue;
+    }
+  }
+
+  &__price-box {
+    @include alignCenter;
+    flex-direction: column;
+  }
+}

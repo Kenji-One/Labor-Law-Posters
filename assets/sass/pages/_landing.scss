@@ -339,11 +339,8 @@
 
 .section-updates {
   display: grid;
-  grid-template-columns: 1.84fr 2.54fr;
-  gap: 16px;
-  @include respond(tab-phone) {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: 1fr;
+
   .updates {
     &__left {
       background: #fafafa;
