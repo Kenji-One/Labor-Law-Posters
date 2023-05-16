@@ -69,6 +69,12 @@
   width: 100%;
 }
 
+.u-small-text {
+  font-size: 12px;
+  line-height: 13px;
+  color: $color-grey--light;
+}
+
 .mobile-hidden {
   @include respond(phone) {
     display: none !important;
@@ -118,6 +124,10 @@
 
 .u-grey-text {
   color: $color-grey-5;
+}
+
+.u-inline-block-text {
+  display: inline-block;
 }
 
 .u-margin-bottom-small {

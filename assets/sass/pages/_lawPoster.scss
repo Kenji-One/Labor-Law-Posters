@@ -144,3 +144,12 @@
     margin-top: 32px;
   }
 }
+.products-archive {
+  .section-products {
+    .products {
+      &__product {
+        width: unset;
+      }
+    }
+  }
+}

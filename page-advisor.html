@@ -30,30 +30,177 @@
     /> -->
   </head>
   <body>
-    <main class="container single-2 u-margin-top-medium" id="main">
-      <table>
-        <tr>
-          <th>Title 1</th>
-          <td>Description 1</td>
-        </tr>
-        <tr>
-          <th>Title 2</th>
-          <td>Description 2</td>
-        </tr>
-        <tr>
-          <th>Title 3</th>
-          <td>Description 3</td>
-        </tr>
-        <tr>
-          <th>Title 4</th>
-          <td>Description 4</td>
-        </tr>
-        <tr>
-          <th>Title 5</th>
-          <td>Description 5</td>
-        </tr>
-      </table>
+    <main class="container u-margin-top-big contact-us">
+      <div class="col-md-8">
+        <h2 class="heading-primary u-center-text u-margin-bottom-small">
+          Contact Us
+        </h2>
+        <div class="row u-margin-bottom-smallest">
+          <div class="col-md-12">
+            <span id="contactusplease">
+              <p style="font-size: 15px">
+                If our website has not fully answered any questions you may
+                have, please feel free to fill out the form below and one of our
+                representatives will contact you shortly.
+              </p>
+              <strong style="font-size: 15px" id="contactusplease1"
+                >For information regarding orders, please contact us at
+                <a href="tel:800-745-9970">(800)-745-9970</a> and one of our
+                representatives will be able to assist you.</strong
+              >
+            </span>
+          </div>
+        </div>
+        <form
+          class="form contact"
+          action="https://formsubmit.co/laborposterlaw@gmail.com"
+          id="contact-form"
+          method="POST"
+          data-hasrequired="* Required Fields"
+          novalidate="novalidate"
+        >
+          <fieldset class="fieldset">
+            <legend class="legend">
+              <span>Write <b>Us</b></span>
+            </legend>
+            <br />
+            <fieldset class="fieldset">
+              <div class="fields row flex name-email u-margin-bottom-small">
+                <div class="field name required col-md-6-contact">
+                  <label class="label" for="name"><span>Name</span></label>
+                  <div class="control">
+                    <input
+                      name="name"
+                      id="name"
+                      title="Name"
+                      value=""
+                      class="input-text"
+                      type="text"
+                      data-validate="{required:true}"
+                      aria-required="true"
+                    />
+                  </div>
+                </div>
+                <div class="field email required col-md-6-contact">
+                  <label class="label" for="email"><span>Email</span></label>
+                  <div class="control">
+                    <input
+                      name="email"
+                      id="email"
+                      title="Email"
+                      value=""
+                      class="input-text"
+                      type="email"
+                      data-validate="{required:true, 'validate-email':true}"
+                      aria-required="true"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="fields u-margin-bottom-small">
+                <div class="field telephone">
+                  <label class="label" for="telephone"
+                    ><span>Phone Number</span></label
+                  >
+                  <div class="control">
+                    <input
+                      name="telephone"
+                      id="telephone"
+                      title="Phone Number"
+                      value=""
+                      class="input-text"
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="fields">
+                <div class="field comment required">
+                  <label class="label" for="comment"
+                    ><span>What’s on your mind?</span></label
+                  >
+                  <div class="control">
+                    <textarea
+                      name="comment"
+                      id="comment"
+                      title="What’s on your mind?"
+                      class="input-text"
+                      cols="5"
+                      rows="8"
+                      data-validate="{required:true}"
+                      aria-required="true"
+                      style="height: 201px"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="actions-toolbar contact-us-submit-btn">
+              <div class="primary">
+                <button type="submit" title="Submit" class="btn btn__blue">
+                  <span>Submit</span>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <!--<div class="contacts-title">Contact <b>Details</b></div>-->
+        <!-- <div class="round-box width-3">
+          <h2>Contact Information</h2>
+          <div class="left-box width-2">
+            <div class="left-box marginRight">
+              <div class="left">
+                <img
+                  src="https://www.laborlawcenter.com/media/wysiwyg/new-folder/contact_phone_icon.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="right marginTopP">
+                <p>
+                  <strong>Phone:</strong><br />Toll-Free: 800-745-9970<br />Fax:
+                  714-276-6445
+                </p>
+              </div>
+            </div>
+            <div class="left-box marginRight">
+              <div class="left">
+                <img
+                  src="https://www.laborlawcenter.com/media/wysiwyg/new-folder/contact_mailbox_icon.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="right marginTopP">
+                <p>
+                  <strong>Mailing Address:</strong><br />3501 W. Garry Avenue<br />Santa
+                  Ana, CA 92704-6422
+                </p>
+              </div>
+            </div>
+            <div class="left-box">
+              <div class="left">
+                <img
+                  src="https://www.laborlawcenter.com/media/wysiwyg/new-folder/contact_email_icon.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="right marginTopP">
+                <p>
+                  <strong>Email</strong><br />Service/Product Inquiries:
+                  <a href="mailto:corporate@laborlawcenter.com"
+                    >corporate@laborlawcenter.com</a
+                  ><br />
+                  Customer Service Inquiries:
+                  <a href="mailto:customerservice@laborlawcenter.com"
+                    >customerservice@laborlawcenter.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>

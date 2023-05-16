@@ -23,6 +23,40 @@
 //     second.style.maxHeight = second.scrollHeight + "px";
 //   }
 // }
+function stringChallenge(str) {
+  const ChallengeToken = "47alhz90e25b";
+  let stringWithDashes = "";
+
+  for (let i = 0; i < str.length - 1; i++) {
+    stringWithDashes += str[i];
+
+    const currentNum = parseInt(str[i]);
+    const nextNum = parseInt(str[i + 1]);
+
+    if (currentNum % 2 !== 0 && nextNum % 2 !== 0) {
+      stringWithDashes += "-";
+    }
+  }
+
+  stringWithDashes += str[str.length - 1];
+  const finalString = stringWithDashes + ChallengeToken;
+
+  let stringWithUnderscores = "";
+
+  for (let i = 0; i < finalString.length; i++) {
+    if ((i + 1) % 4 === 0) {
+      stringWithUnderscores += "_";
+    } else {
+      stringWithUnderscores += finalString[i];
+    }
+  }
+
+  return stringWithUnderscores;
+}
+
+const inputString = "454793";
+const outputString = stringChallenge(inputString);
+alert(outputString);
 
 let question = document.querySelectorAll(".drop-down__before-box");
 

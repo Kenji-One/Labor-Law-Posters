@@ -16,7 +16,9 @@
   }
 }
 .products {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
+  gap: 16px;
   &__product {
     border: 1px solid $color-grey-4;
     border-top: none;
@@ -24,5 +26,17 @@
     box-shadow: 0 -3px 0 0 $color-blue;
     padding-bottom: 16px;
     color: inherit;
+  }
+}
+
+.poster-clips,
+.by-business {
+  .products {
+    &__product {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 }
